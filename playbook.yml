@@ -1,0 +1,14 @@
+---
+- name: Simple AWX Git Test
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Ping localhost
+      ansible.builtin.ping:
+
+    - name: Create a sample file
+      ansible.builtin.file:
+        path: /tmp/awx_git_test.txt
+        state: touch
