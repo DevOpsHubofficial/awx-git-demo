@@ -12,3 +12,6 @@
       ansible.builtin.file:
         path: /tmp/awx_git_test.txt
         state: touch
+    - name: Check the update
+      ansible.builtin.command: uptime
+      
